@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 27 27 27;
+    --foreground: 225 225 225;
+    --muted: 115 115 115;
+    --accent: 210 77 175;
+    /* hex value of rgb(254,254,91) color is  #FEFE5B  */
+  }
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+
+  .custom-bg {
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[0.5px] shadow-glass-inset hover:shadow-glass-sm;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drift {
+  0% {
+    left: -5%; /* Start slightly off the left */
+  }
+  50% {
+    left: 50%; /* Drift to the center */
+  }
+  100% {
+    left: 105%; /* Drift slightly off the right */
+  }
+}
+
+
